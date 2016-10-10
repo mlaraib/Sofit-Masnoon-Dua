@@ -62,8 +62,8 @@ public class Details extends AppCompatActivity {
         this.b2 = (ImageButton) findViewById(R.id.previous);
 
         this.textnames.setText(ArabicUtilities.reshape(this.name[this.indexSelected]));
-        this.textdesc.setText("   \n" + ArabicUtilities.reshape((String) this.english.get(this.indexSelected)));
-        this.title.setText("   " + ArabicUtilities.reshape(this.namedesc[this.indexSelected]));
+        this.textdesc.setText("\n" + ArabicUtilities.reshape((String) this.english.get(this.indexSelected)));
+        this.title.setText(ArabicUtilities.reshape(this.namedesc[this.indexSelected]));
 
 
         //For Next Button
@@ -78,8 +78,8 @@ public class Details extends AppCompatActivity {
                 }
                 //Details.this.slidingimage.setImageResource(Details.this.imgid[Details.this.indexSelected].intValue());
                 Details.this.textnames.setText(ArabicUtilities.reshape(Details.this.name[Details.this.indexSelected]));
-                Details.this.textdesc.setText("   \n" + ArabicUtilities.reshape((String) Details.this.english.get(Details.this.indexSelected)));
-                Details.this.title.setText("   " + ArabicUtilities.reshape(Details.this.namedesc[Details.this.indexSelected]));
+                Details.this.textdesc.setText("\n" + ArabicUtilities.reshape((String) Details.this.english.get(Details.this.indexSelected)));
+                Details.this.title.setText(ArabicUtilities.reshape(Details.this.namedesc[Details.this.indexSelected]));
             }
         });
 
@@ -95,8 +95,8 @@ public class Details extends AppCompatActivity {
                 }
                 //Details.this.slidingimage.setImageResource(Details.this.imgid[Details.this.indexSelected].intValue());
                 Details.this.textnames.setText(ArabicUtilities.reshape(Details.this.name[Details.this.indexSelected]));
-                Details.this.textdesc.setText("   \n" + ArabicUtilities.reshape((String) Details.this.english.get(Details.this.indexSelected)));
-                Details.this.title.setText("   " + ArabicUtilities.reshape(Details.this.namedesc[Details.this.indexSelected]));
+                Details.this.textdesc.setText("\n" + ArabicUtilities.reshape((String) Details.this.english.get(Details.this.indexSelected)));
+                Details.this.title.setText(ArabicUtilities.reshape(Details.this.namedesc[Details.this.indexSelected]));
             }
         });
     }

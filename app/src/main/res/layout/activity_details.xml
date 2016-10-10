@@ -11,7 +11,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="fill_parent"
-        android:layout_height="440dp">
+        android:layout_height="480dp">
 
 
     <LinearLayout
@@ -20,17 +20,30 @@
         android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/title"
-        android:textSize="18dp"
-        android:textColor="#9c1200"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:textAlignment="center"
+        <LinearLayout
 
-        />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="#9c1200"
+                android:textStyle="bold"
+                android:text="abcdefgh"
+                android:padding="5dp"
+
+                />
+
+        </LinearLayout>
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,32 +70,28 @@
 
         />
 
-
-
     </LinearLayout>
     </ScrollView>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="5dp"
-
+        android:gravity="center"
         >
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back"
             android:id="@+id/previous"
-            android:layout_marginLeft="50dp"
             android:background="@null"/>
+
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/next"
             android:id="@+id/next"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:background="@null"/>
 
     </LinearLayout>
