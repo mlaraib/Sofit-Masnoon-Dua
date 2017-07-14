@@ -1,4 +1,4 @@
-package masnoonislamicdua.sofit.com.masnoonduas;
+package com.grovelet.masnoon.dua2017.masnoondua2017;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,17 +8,22 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.RelativeLayout;
 
 public class DuaList extends AppCompatActivity {
 
     ListView listView;
     int position;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dua_list);
+
         listView = (ListView) findViewById(R.id.list);
+
+        RelativeLayout adView = (RelativeLayout)findViewById(R.id.adViewCon);
+        MainActivity.ads.loadBanner(adView);
 
 //        String[] values= new String[] {
 //                "1: For Morning & Evening",
@@ -388,19 +393,20 @@ public class DuaList extends AppCompatActivity {
                 "When tired of life",
                 "Istikhara for Marriage"};
 
-        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,COUNTRIES);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_data, COUNTRIES);
 
         listView.setAdapter(adapter);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int posit, long l) {
-                position=posit;
-               // Toast.makeText(DuaList.this, position, Toast.LENGTH_SHORT).show();
+                position = posit;
                 Intent i = new Intent(DuaList.this, Details.class);
                 i.putExtra("index", position);
                 DuaList.this.startActivity(i);
                 Log.e("Position", String.valueOf(position));
+                MainActivity.ads.showInterstitial(false);
             }
         });
     }

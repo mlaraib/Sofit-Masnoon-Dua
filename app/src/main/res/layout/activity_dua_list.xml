@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/whiteback"
-    tools:context="masnoonislamicdua.sofit.com.masnoonduas.DuaList">
+    android:background="@drawable/backblue"
+    tools:context="com.grovelet.masnoon.dua2017.masnoondua2017.DuaList">
 
+    <RelativeLayout
+        android:id="@+id/adViewCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        >
-    </ListView>
+        android:layout_height="match_parent"
+        android:layout_above="@id/adViewCon"
+        android:divider="#95a5a6"
+        android:dividerHeight="1px"
+        android:padding="15dp"
+        android:scrollbars="none"/>
 
-</LinearLayout>
+</RelativeLayout>

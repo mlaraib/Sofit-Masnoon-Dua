@@ -1,4 +1,4 @@
-package masnoonislamicdua.sofit.com.masnoonduas;
+package com.grovelet.masnoon.dua2017.masnoondua2017;
 
 import android.content.Context;
 import android.graphics.Typeface;

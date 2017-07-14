@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/bigscreen"
-    tools:context="masnoonislamicdua.sofit.com.masnoonduas.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.grovelet.masnoon.dua2017.masnoondua2017.MainActivity">
 
-    <ImageButton
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:id="@+id/adViewCon"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="275dp"
-        android:id="@+id/dua"
-        android:src="@drawable/button"
-        android:background="@null"/>
+        android:layout_alignParentBottom="true"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_above="@id/adViewCon">
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/dua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/button" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package masnoonislamicdua.sofit.com.masnoonduas;
+package com.grovelet.masnoon.dua2017.masnoondua2017;
 
 /**
  * Created by iamla on 10/4/2016.
